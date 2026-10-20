@@ -11,6 +11,7 @@
 
 ## 当前状态
 - 当前单元：**U0 环境**
+- 环境进度：Python 3.15.0、Git 2.56、VS Code 1.142（含 Python/中文扩展）均已装好；**待交**：`hello.py`、报错记录、预测值
 - 上一单元：无
 - 新对话/换电脑时：先读 `TEACHING.md` → `ROADMAP.md` → 本文件 → `SETUP.md`，再继续
 

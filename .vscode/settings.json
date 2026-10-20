@@ -1,0 +1,31 @@
+{
+  // —— 文件与编码（Windows 上最容易踩坑的地方）——
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/out": true
+  },
+
+  // —— 编辑器 ——
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.rulers": [100],
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": false,
+
+  // —— 终端：本课程统一用 PowerShell，并在终端里手敲命令 ——
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "terminal.integrated.cwd": "${workspaceFolder}",
+
+  // —— Python ——
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": false,
+
+  // —— Git：改了什么在左侧源代码管理里看，提交仍在终端做 ——
+  "git.autofetch": false,
+  "explorer.confirmDelete": true
+}
