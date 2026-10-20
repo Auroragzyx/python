@@ -1,0 +1,18 @@
+# 不提交的内容
+# 运行产出
+out/
+# Python 缓存与虚拟环境
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+# 日志、临时文件
+*.log
+*.tmp
+~$*
+Thumbs.db
+.DS_Store
+# 本地私有内容（真实资产表、凭据、实验记录）
+private/
+.env
+*.local.*
