@@ -17,6 +17,10 @@
   "editor.minimap.enabled": false,
   "editor.formatOnSave": false,
 
+  // 关闭预览模式：单击文件就是正式标签，不会被下一次单击替换掉
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+
   // —— 终端：本课程统一用 PowerShell，并在终端里手敲命令 ——
   "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
   "terminal.integrated.cwd": "${workspaceFolder}",
