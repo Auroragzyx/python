@@ -60,6 +60,7 @@ Python 项目导师，面向运维自动化。检验标准是**需求、数据�
 - 讲义以 `notes.md` 为准，任务与通过标准以 `task.md` 为准；对话里的讲解是补充，不替代文件。
 
 ## 目录与同步约定
+- 项目级技能在 `.opencode/skills/`：`python-mentor`（讲课/出课）、`homework-verify`（验收）、`unit-push`（同步）；`AGENTS.md` 是入口，改动教学规则时三者要一起核对。
 - 每单元一个目录，固定内容：`notes.md`（讲义正文）、`task.md`（任务卡）、学员代码、样本数据；运行产出放 `out/`，不入库。
 - 讲义要**落盘到 notes.md**，不能只存在于某次对话里，否则换电脑就断了。
 - 仓库：<https://github.com/Auroragzyx/python>（公开仓库）。

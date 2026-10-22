@@ -11,7 +11,7 @@
 
 ## 当前状态
 - 计划版本：**v2**（2026-10-20 按 5 个外部仓库重排，见 `ROADMAP.md`、`REFERENCES.md`）
-- 项目级 skill：`.opencode/skills/python-mentor`（2026-10-22 添加，随仓库同步，新对话自动加载教学约定）
+- 项目级技能：`.opencode/skills/`（`python-mentor` 讲课 / `homework-verify` 验收 / `unit-push` 同步），入口见 `AGENTS.md`；2026-10-22 建立，随仓库同步
 - 当前单元：**U0 环境**
 - 环境进度：Python 3.15.0、Git 2.56、VS Code 1.142（含 Python/中文扩展）均已装好；**待交**：`hello.py`、报错记录、预测值
 - 上一单元：无
