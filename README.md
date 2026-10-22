@@ -16,6 +16,8 @@
 6. `unitXX_*/notes.md` — 该单元讲义正文
 7. `unitXX_*/task.md` — 该单元作业与通过标准
 
+在 OpenCode 里打开本仓库时，项目级 skill `python-mentor` 会自动加载，上面这个阅读顺序不用每次手动交代。
+
 ## 计划概况
 
 | 阶段 | 目标 | 核心产出 |
@@ -39,6 +41,7 @@ python/
 ├── SETUP.md               环境与重建步骤
 ├── REFERENCES.md          外部资料清单与使用规则
 ├── .vscode/               编辑器配置（UTF-8、终端、Python）
+├── .opencode/skills/python-mentor/SKILL.md   项目级教学 skill（自动加载）
 └── unit00_env/            单元 0：环境与第一个脚本
     ├── notes.md           讲义
     ├── task.md            任务卡
