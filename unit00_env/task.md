@@ -5,8 +5,9 @@
 > 状态（2026-10-20）：Python 3.15.0 已装好、VS Code 已配好；**待做**：写 `hello.py`、跑通、交作业。
 
 ## 一、准备（一次性）
-1. 安装 Python：见 `E:\python\SETUP.md`
-2. 新开 PowerShell，依次运行，确认环境正常：
+1. 环境已装好（Python 3.15.0 / VS Code / Git）；需要重装时看 `E:\python\SETUP.md`
+2. 用 VS Code **打开文件夹** `E:\python`（文件 → 打开文件夹），不要只打开某个 `.py` 文件
+3. 按 `` Ctrl+` `` 打开内置终端，工作目录应显示为 `E:\python`，依次运行：
    ```powershell
    python --version
    where.exe python
@@ -22,11 +23,18 @@
 3. 打印 `2 + 3 * 4` 的计算结果
 4. 用 `#` 写一句注释，说明你预测的结果是多少
 
-## 三、运行
-```powershell
-cd E:\python\unit00_env
-python hello.py
-```
+## 三、运行（在 VS Code 里完成）
+1. 左侧资源管理器展开 `unit00_env`，右键 → 新建文件 → `hello.py`，写完按 **`Ctrl+S` 保存**
+2. 在内置终端里：
+   ```powershell
+   cd E:\python\unit00_env
+   python hello.py
+   ```
+3. 确认输出与预期一致
+
+**两个 VS Code 特有的坑：**
+- **不保存 = 跑的是旧代码**。VS Code 默认不自动保存，改完必须 `Ctrl+S`，否则解释器读到的还是磁盘上的旧内容，你会以为"改了没用"。
+- **右上角的 ▷ 和 F5 暂时别用**。它们会跳过"敲命令"这一步，而本课要学的正是这一步（见 `notes.md` 第 1 节）。
 
 预期（示例，内容按你自己填）：
 ```
