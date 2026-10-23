@@ -14,9 +14,9 @@
 | [pathlib](https://docs.python.org/3/library/pathlib.html) | 文件路径及脚本相邻样本定位 | 文件课先讲路径含义，支架也要解释，不提前作为P1任务 |
 | [VS Code Python设置](https://code.visualstudio.com/docs/python/settings-reference) | 运行设置可配置 | 不将按钮工作目录当固定事实 |
 
-“官方教程先讲X”不是所有人都必须先学X的证明；实际证据是此学员尚不能独立写几行，而旧U1同时要求多项未验证的技能。先缩小任务，再按表现推进。
+“官方教程先讲X”不是所有人都必须先学X的证明；实际证据是此学员尚不能独立写几行，所以先从变量开始。先缩小任务，再按表现推进。
 
-## 保留旧参考的用途，调整负担
+## 外部参考的用途与负担
 
 - [python-for-devops](https://github.com/iam-veeramalla/python-for-devops)：选题参考，不作为零基础主教材，不按Day编号推进。
 - [devops-exercises](https://github.com/bregman-arie/devops-exercises)：教师按需查漏，不强制阶段末额外做3–5道陌生题。
@@ -25,10 +25,10 @@
 - [Netmiko原作者仓库](https://github.com/ktbyers/netmiko)：仅实验设备需求明确时选学，不把真实网络设备作为阶段完成前提。
 - 云API文档在厂商与只读任务明确后选用；不先索要账号。
 
-删去旧表里的星数、体积、活跃日期排名：它们易过时，也不解释此学员能否理解。旧文档将Fabric笼统判为Windows不适用，现不作这种平台一刀切判断；只因当前项目不需要而不引入。
+不采用星数、体积、活跃日期排名：它们易过时，也不解释此学员能否理解。旧文档将Fabric笼统判为Windows不适用，现不作这种平台一刀切判断；只因当前项目不需要而不引入。
 
 ## 使用规则
 
 导师给中文解释和具体输入输出，学员可查阅但不要求通读英文。同一时间一个学习入口。借用外部材料时标来源、核对许可；本次讲义和练习为原创，不复制教材整章或答案。
 
-当前落点、每阶段边界及旧新映射以[ROADMAP.md](ROADMAP.md)为准；不在这里另存一个带过期U编号的日程。
+当前落点与每阶段边界以[ROADMAP.md](ROADMAP.md)为准；不在这里另存一个带过期编号的日程。
