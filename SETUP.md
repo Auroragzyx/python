@@ -1,74 +1,52 @@
-# SETUP.md — 环境与运行方式
+# 环境与运行方式
 
-## 本机现状（2026-10-20 实测）
-| 组件 | 状态 |
-|---|---|
-| 系统 | Windows 10（build 19041），默认 shell：Windows PowerShell 5.1 |
-| 项目目录 | `E:\python`，剩余约 378 GB |
-| Python | **3.15.0**，`C:\Users\Administrator\AppData\Local\Programs\Python\Python315\python.exe`（用户 PATH，`python` 命令可用） |
-| Git | **2.56.0**，`C:\Program Files\Git`（系统 PATH） |
-| VS Code | **1.142.0**，`E:\VSCode\Microsoft VS Code`（`code` 命令可用） |
-| 扩展 | ms-python.python / pylance / debugpy / 中文语言包 |
-| 未安装 | conda、winget、WSL |
+## 先用已有环境，不重复安装
 
-- 编码：Python 3.15 默认启用 UTF-8 模式（PEP 686），**不需要**再设 `PYTHONUTF8`；项目统一 UTF-8 + LF（`.vscode/settings.json` 已配）
-- 网络：可访问 python.org 与 github.com
+仓库旧记录：学员机Windows 10 / PowerShell 5.1，Python 3.15.0、Git 2.56、VS Code 1.142。它们是历史记录，本次远程审查没有访问学员电脑，也未重新验证这些版本。P1仅用标准语法，无第三方依赖。
 
-## VS Code 怎么用（本课程固定姿势）
+本次课件在审查者Windows / Python 3.14.4上实跑；不把它冒称成学员机3.15实测。当前环境能运行就继续，无需为了开始变量练习重新装Python、Git或扩展。
 
-1. **打开项目**：终端执行 `code E:\python`，或 文件 → 打开文件夹 → `E:\python`（必须打开这个根目录，不要只打开某个文件，否则相对路径和 Git 都不对）
-2. **界面中文**：中文语言包已装，首次启动会问是否切换，选"Change Language and Restart"
-3. **终端**：按 `` Ctrl+` `` 打开，默认 PowerShell，工作目录就是项目根
-4. **选解释器**：`Ctrl+Shift+P` → `Python: Select Interpreter` → 选 `Python 3.15.0`
-5. **运行脚本**：两种方式都要会
-   ```powershell
-   cd unit00_env
-   python hello.py
-   ```
-   也可以点右上角 ▷，但要读一眼它在终端里打印的命令：它从项目根 `E:\python` 启动，工作目录跟手动 `cd` 进去不一样。F5 是调试器，U2 之后再学。
-6. **看改动**：左侧"源代码管理"图标能看到哪些文件变了；提交和推送仍在终端敲 `git` 命令
-7. **保存**：`Ctrl+S`。VS Code 默认不自动保存，不保存就运行等于跑旧代码——这是新手最常见的"改了没反应"
-8. **读 Markdown**：按 `Ctrl+Shift+V` 看预览（标题、代码块会正常排版）；按 `Ctrl+K` 再按 `V` 开在侧边对照
+## 学员当前只需三步
 
-## 验证命令与预期结果
+1. VS Code打开本仓库**文件夹**，不只打开单个脚本。
+2. 打开prep01_values/notes.md，Ctrl+Shift+V可看预览。
+3. 修改.py后Ctrl+S，在底部终端（Ctrl+反引号）从项目根执行：
+
 ```powershell
-python --version                # Python 3.15.0
-where.exe python                # ...\Python315\python.exe
-python -c "print('中文测试')"    # 中文测试（不乱码）
-python -c "import sys; print(sys.version); print(sys.executable)"
+python prep01_values/demo.py
 ```
 
-## Git 与仓库同步
-- 版本：`git version 2.56.0.windows.2`，安装在 `C:\Program Files\Git`，已写入**系统 PATH**
-- 认证：Git Credential Manager 2.9.1，首次 `git push` 弹浏览器登录 GitHub，凭据存 Windows 凭据管理器，不落项目文件
-- 仓库：<https://github.com/Auroragzyx/python>（**公开**），分支 `main`
-- 提交身份：`Auroragzyx <345183435+Auroragzyx@users.noreply.github.com>`（GitHub noreply 地址，不暴露真实邮箱）
-- 日常同步：
-  ```powershell
-  cd E:\python
-  git status          # 看哪些文件变了
-  git add -A
-  git commit -m "u01: 讲义与任务卡"
-  git push
-  ```
+`python ...`是终端命令，赋值和print等Python代码写进.py。若终端已进入prep01_values目录，运行python demo.py即可。不要把代码块的语言标签或三条反引号也粘进代码。
 
-## 目录约定
-- 每单元一个目录：`unit00_env\`、`unit01_inventory\` …
-- 每单元固定：`notes.md`（讲义）、`task.md`（任务卡）、代码、样本数据
-- 样本数据、辅助代码放在单元目录内，代码用**相对路径**引用，不写绝对路径
-- 运行产出放各单元 `out\` 下（已被 `.gitignore` 排除），不复用为下一单元的输入
-- 默认不 import 旧作业代码
+## 点右上角运行时
 
-## 换电脑重建步骤
-1. 安装 Python 3.12 以上，安装时勾选 `Add python.exe to PATH`
-2. 安装 Git for Windows（默认选项即可，自带凭据管理器）
-3. 安装 VS Code，并装四个扩展：
-   ```powershell
-   code --install-extension ms-python.python
-   code --install-extension ms-python.vscode-pylance
-   code --install-extension ms-python.debugpy
-   code --install-extension ms-ceintl.vscode-language-pack-zh-hans
-   ```
-4. `git clone https://github.com/Auroragzyx/python.git`
-5. `code python` 打开，跑上面四条验证命令，版本号记回本文件
-6. 进入单元目录，`python <脚本名>.py` 运行
+可以使用Python扩展的运行按钮。实际解释器、命令与工作目录取决于扩展和设置；查看终端输出，不能把“按钮永远从项目根启动”当保证。F5调试不是当前前置能力；等断点有助于理解执行时再讲，不按U2编号机械开启。
+
+相对文件路径由当前工作目录解释。新文件课会提供并解释基于脚本位置定位样本的代码。当前P1不读文件，两种启动方式相同。原U1存在已记录的相对路径问题，仅作旧稿保留，勿把它当新路线当前作业。
+
+## 环境确实有问题时再核对
+
+```powershell
+python --version
+where.exe python
+python -c "import sys; print(sys.version); print(sys.executable)"
+python -c "print('中文测试')"
+```
+
+记录实际输出，不将旧电脑路径当所有机器必须一致的结果。找不到python时按Python官方安装说明修复；新电脑选择当时稳定且目标库支持的版本，不能只写“3.12以上”就承诺所有未来库兼容。
+
+中文显示异常先区分：编辑器文件编码、open的encoding、终端显示、父进程捕获输出。UTF-8模式不等于修复一切终端乱码；不要求学员无诊断就永久setx环境变量。本课只确认自己的终端能显示三行中文即可。
+
+## 后续第三方库
+
+到O1才按当时目标库文档核对支持的Python版本，创建项目环境，用同一解释器的-m pip安装。先验证导入和路径，再接业务；本课不预装psutil、Netmiko或requests。
+
+## Git与同步
+
+仓库：https://github.com/Auroragzyx/python 。新电脑clone后打开目录，读取当前进度，虚拟环境和聊天记录不会随Git自动恢复。
+
+先用git status/git diff看清改动，再逐项git add具体文件。不使用git add -A；未知文件保留。身份和远程以实际仓库为准，不修改全局配置。提交/推送需当前有效授权；本次是改进提案PR，不能据旧笔记自动向main发布或合并。
+
+## 目录
+
+每课notes.md为学员入口，task.md为唯一验收标准，演示与练习分开。样本随课，产出在单元out/，隔离验证在_work/，均不提交。真实设备表和凭据不作为教学样本。

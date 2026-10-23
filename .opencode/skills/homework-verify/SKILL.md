@@ -1,5 +1,5 @@
 ---
-name: 作业验收
+name: homework-verify
 description: 验收本仓库 unitNN 作业时使用。在隔离副本按任务书检查正常、边界与失败路径，记录退出码和帮助程度，不改学员原文件。
 ---
 
@@ -12,14 +12,16 @@ description: 验收本仓库 unitNN 作业时使用。在隔离副本按任务�
 
 ## 运行环境
 
-- 项目根 `E:\python`，Python 3.15；U5 之前没有虚拟环境
+- 项目根、解释器与依赖以当前SETUP及实测为准，不写死E盘、版本或旧U5时间点。
 - 把单元目录复制到 `_work\<unit>\` 再跑，或用临时目录；**不改原文件、不污染 samples/**
 - 两条路径都要跑：
   1. 终端：`cd unitNN_xxx` → `python xxx.py`
-  2. 项目根：`python unitNN_xxx\xxx.py`（等价于 VS Code 右上角 ▷，工作目录不同）
+  2. 项目根：`python unitNN_xxx\xxx.py`；按钮行为另按实际配置观察，不能宣称严格等价。
 - 记录退出码（PowerShell 里 `$LASTEXITCODE`），不只看打印内容
 
 ## 检查项
+
+下面是教师按原题适用性选择的检查维度，不是每次新增的门槛。变量课不验CSV、IP、编码或并发；注释骨架退出0却无预期输出仍是待完成。历史原题与新路线分别记录，不回溯增加标准。
 
 | 类别 | 具体检查 |
 |---|---|
