@@ -1,0 +1,35 @@
+hostname,ip,role,os,site,status
+sw-core-01,192.0.2.11,switch,Cisco IOS,上海,online
+sw-acc-01,192.0.2.12,switch,Cisco IOS,上海,online
+sw-acc-02,192.0.2.13,switch,Cisco IOS,上海,offline
+rt-edge-01,192.0.2.1,router,Huawei VRP,上海,online
+srv-web-01,192.0.2.21,server,CentOS 7,上海,online
+srv-db-01,192.0.2.22,server,CentOS 7,上海,online
+ap-floor3-01,192.0.2.31,ap,Huawei VRP,上海,unknown
+sw-core-02,192.0.2.14,switch,Cisco IOS,北京,online
+srv-file-01,192.0.2.41,server,Windows Server 2019,北京,online
+srv-file-02,192.0.2.42,server,Windows Server 2022,北京,offline
+rt-edge-02,192.0.2.2,router,Huawei VRP,北京,online
+ap-floor1-01,192.0.2.32,ap,Huawei VRP,北京,online
+sw-acc-11,192.0.2.15,switch,Cisco IOS,深圳,online
+sw-acc-12,192.0.2.16,switch,Cisco IOS,深圳,online
+srv-app-01,192.0.2.51,server,Windows Server 2022,深圳,online
+srv-app-02,192.0.2.52,server,Windows Server 2022,深圳,unknown
+rt-core-01,192.0.2.3,router,Cisco IOS,深圳,offline
+sw-acc-21,192.0.2.17,switch,Huawei VRP,广州,online
+srv-log-01,192.0.2.61,server,CentOS 7,广州,online
+ap-floor2-01,192.0.2.33,ap,Huawei VRP,广州,online
+srv-db-02,192.0.2.23,server,CentOS 7,上海,online
+sw-acc-03,192.0.2.18,switch,Cisco IOS,上海,online
+srv-web-02,192.0.2.24,server,CentOS 7,上海,offline
+rt-edge-03,192.0.2.4,router,Huawei VRP,上海,online
+srv-file-03,192.0.2.43,server,Windows Server 2019,北京,online
+ap-floor4-01,192.0.2.34,ap,Huawei VRP,北京,offline
+srv-app-03,192.0.2.53,server,Windows Server 2022,深圳,online
+sw-acc-22,192.0.2.19,switch,Huawei VRP,广州,offline
+srv-log-02,192.0.2.62,server,CentOS 7,广州,unknown
+sw-core-01,192.0.2.10,switch,Cisco IOS,上海,online
+srv-bad-01,192.0.2.300,server,CentOS 7,上海,online
+srv-nosite-01,192.0.2.70,server,CentOS 7,,online
+ sw-space-01 ,192.0.2.71,switch,Cisco IOS,北京,online
+sw-extra-01,192.0.2.72,switch,Cisco IOS,深圳,online,备用设备
