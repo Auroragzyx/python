@@ -8,6 +8,27 @@ U0 你打印的是写死的文字。这一课的数据来自文件：`samples/de
 本课只有一个主要新难点：**数据形状**。一行 CSV 读进来不是一串文字，而是**一个字典**；
 整个文件读进来不是字符串，而是**一个列表，里面装着 34 个字典**。
 
+## 先分清两种代码块（重要）
+
+本文里出现两类代码，位置完全不同：
+
+| 代码块标注 | 写在哪 | 例子 |
+|---|---|---|
+| `powershell` | VS Code 底部**终端**，回车就执行 | `cd E:\python\unit01_inventory`、`python list_devices.py` |
+| `python` | **`.py` 文件里**，保存后由解释器执行 | `import csv`、`for r in rows:` |
+
+口诀：**终端只负责"启动"，`.py` 文件里才是"程序内容"。**
+
+在终端里敲 `import csv` 会得到：
+
+```
+import : 无法将"import"项识别为 cmdlet、函数、脚本文件或可运行程序的名称。
+```
+
+终端不认 Python 语法，只认 `cd`、`python`、`git` 这类命令。
+
+> 阅读提示：`notes.md` 在 VS Code 里按 `Ctrl+Shift+V` 打开预览；按 `Ctrl+K` 再按 `V` 可以开在侧边，左边源码右边效果。
+
 ## 1. 启动命令
 
 ```powershell
