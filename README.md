@@ -1,65 +1,40 @@
 # Python 运维自动化学习库
 
-运维自动化方向的 Python 学习项目。教案、作业、样本、代码按单元归档，换电脑后可直接继续。
+面向零编程基础，以Windows运维场景练习编程。样本虚构，不操作生产系统。
 
-仓库：<https://github.com/Auroragzyx/python>（公开仓库，样本数据全部为虚构数据）
+## 现在从哪里开始
 
-## 怎么读（新电脑 / 新对话）
+**先打开 [P1：变量与值](prep01_values/notes.md)，读完再做同目录的 [任务](prep01_values/task.md)。**
 
-按顺序看：
+U0按原题通过，结论保留；原U1 CSV项目先暂缓，未验收。当前反馈是无法独立写代码（审查请求者转述，非现场测评），所以先补变量、条件、循环、字典，再回设备表。不需要重新安装环境，也不要求今天读完所有规则文件。
 
-1. `TEACHING.md` — 教学约定（怎么教、怎么验收、帮助怎么记录）
-2. `ROADMAP.md` — 学习计划：阶段、单元、产出、验收、时间估算
-3. `LEARNING_PROGRESS.md` — 最新进度、帮助情况、待复测项
-4. `SETUP.md` — 环境重建与运行方式
-5. `REFERENCES.md` — 外部资料清单与使用规则
-6. `unitXX_*/notes.md` — 该单元讲义正文
-7. `unitXX_*/task.md` — 该单元作业与通过标准
+保存.py后，在项目根目录的终端运行：
 
-在 OpenCode 里打开本仓库时，`AGENTS.md` 和三个项目级技能（`python-mentor`、`homework-verify`、`unit-push`）会自动加载，上面这个阅读顺序不用每次手动交代。
-
-## 计划概况
-
-| 阶段 | 目标 | 核心产出 |
-|---|---|---|
-| 1（进行中） | 语言核心 + 文件数据处理 | 设备清单筛选与巡检报表 |
-| 2 | 第三方库 + 本机巡检 | psutil 巡检脚本 + 每日报告 |
-| 3 | 网络探测 + 设备只读 | 批量端口检查器 / Netmiko |
-| 4 | HTTP / API / 云（只读） | API 数据报表 |
-| 5 | 工程化 | 可交付的命令行工具 |
-| 6（可选） | 平台化 | 定时采集 + 存储 + 界面 |
-
-详见 `ROADMAP.md`。当前单元：**U0 环境**（Python、VS Code、Git 已就绪，待交 `hello.py`）。
-
-## 目录结构
-
-```
-python/
-├── TEACHING.md            教学约定
-├── ROADMAP.md             学习计划（阶段/单元/验收）
-├── LEARNING_PROGRESS.md   进度与帮助记录
-├── SETUP.md               环境与重建步骤
-├── REFERENCES.md          外部资料清单与使用规则
-├── .vscode/               编辑器配置（UTF-8、终端、Python）
-├── .opencode/skills/      项目级教学技能（自动加载）
-│   ├── python-mentor/     讲课与出新课（含 references/lesson-design.md）
-│   ├── homework-verify/   作业验收
-│   └── unit-push/         提交与推送
-├── AGENTS.md              仓库规则入口
-└── unit00_env/            单元 0：环境与第一个脚本
-    ├── notes.md           讲义
-    ├── task.md            任务卡
-    └── demo.py            演示脚本
+```powershell
+python prep01_values/demo.py
 ```
 
-每个单元目录固定两类文档：`notes.md`（讲义）、`task.md`（作业）；代码直接在目录内，样本数据同样；运行产出放 `out/`，不入库。
+上面是**终端命令**。Python代码写在.py中，不能直接粘到PowerShell。点右上角运行也可以；排查时看实际命令与当前目录，不假定每个按钮和机器行为相同。
 
-## 环境
+## 路线
 
-Windows 10 + Python 3.15 + Git 2.56 + VS Code 1.142。详见 `SETUP.md`。
+| 阶段 | 顺序与产出 |
+| --- | --- |
+| 当前基础 | P1变量 → P2条件 → P3列表 → P4循环 → P5单条字典 → P6多记录筛选 → P7函数 → P8文件 |
+| 离线设备表 | 新C1 CSV，再逐课学统计、报告、异常、校验、整合；原U1仅作旧稿保留 |
+| 本机巡检 | 环境依赖 → 单项psutil指标 → 阈值 → 日志 → 任务计划 |
+| 后续按需 | 网络只读、HTTP/API、参数/配置/测试；并发、云、Netmiko、平台化选学 |
 
-## 约定
+每单元可跨日，不以编号或课时证明掌握。详见 [ROADMAP.md](ROADMAP.md)。
 
-- 不提交真实资产清单、真实 IP 段、凭据、Token、日志和虚拟环境
-- 样本数据全部虚构（如 `192.0.2.x` 这类文档保留段）
-- 提交与推送由学员授权后执行
+## 给导师或新对话
+
+[AGENTS.md](AGENTS.md)为入口；先读[教学约定](TEACHING.md)、[路线](ROADMAP.md)、[有效进度](LEARNING_PROGRESS.md)、[环境](SETUP.md)，再读当前课件。技能在.opencode/skills/，客户端未自动发现时直接读文件，不假设全部技能会自动加载。
+
+- [课程审查](COURSE_AUDIT.md)：证据、重排理由、验证与限制。
+- [资料边界](REFERENCES.md)：教师参考，不增加学员阅读负担。
+- unit00_env/：历史已通过作业，原学员代码保留。
+- unit01_inventory/：原CSV项目和样本保留，前置补齐后继续。
+- prep01_values/：当前讲义、独立演示、练习骨架；目标不填答案。
+
+代码、通过历史和帮助程度分开记录。产出放各单元out/，验证副本放_work/，均不提交。逐项暂存确认过的文件。本PR由仓库主人审阅，不自动合并。
