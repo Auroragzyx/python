@@ -1,6 +1,8 @@
 # 不提交的内容
 # 运行产出
 out/
+# 验收与临时验证副本
+_work/
 # Python 缓存与虚拟环境
 __pycache__/
 *.py[cod]
